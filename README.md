@@ -1,11 +1,8 @@
-# RISC Zero Rust Starter Template
+# Risc0 Rust Demo
 
-Welcome to the RISC Zero Rust Starter Template! This template is intended to
-give you a starting point for building a project using the RISC Zero zkVM.
-Throughout the template (including in this README), you'll find comments
-labelled `TODO` in places where you'll need to make changes. To better
-understand the concepts behind this template, check out the [zkVM
-Overview][zkvm-overview].
+> This repo is modified from the original [RISC Zero Rust Starter Template](https://github.com/risc0/risc0-rust-starter) generated using `cargo risczero new <project_name\> --guest-name <project_name\>_proof`
+
+This demo leverages upon the [RISC Zero zkVM][zkvm-overview] to create a **proof of age above 18**.
 
 ## Quick Start
 
@@ -20,8 +17,11 @@ command:
 cargo run
 ```
 
-This is an empty template, and so there is no expected output (until you modify
-the code).
+Running with release packages
+
+```bash
+cargo run --release
+```
 
 ### Executing the Project Locally in Development Mode
 
@@ -31,19 +31,6 @@ Put together, the command to run your project in development mode while getting 
 
 ```bash
 RUST_LOG="[executor]=info" RISC0_DEV_MODE=1 cargo run
-```
-
-### Running Proofs Remotely on Bonsai
-
-_Note: The Bonsai proving service is still in early Alpha; an API key is
-required for access. [Click here to request access][bonsai access]._
-
-If you have access to the URL and API key to Bonsai you can run your proofs
-remotely. To prove in Bonsai mode, invoke `cargo run` with two additional
-environment variables:
-
-```bash
-BONSAI_API_KEY="YOUR_API_KEY" BONSAI_API_URL="BONSAI_URL" cargo run
 ```
 
 ## How to Create a Project Based on This Template
