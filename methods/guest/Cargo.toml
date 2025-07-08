@@ -1,0 +1,11 @@
+[package]
+name = "hhdemoguest"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+
+[dependencies]
+chrono = "0.4.41"
+risc0-zkvm = { version = "^2.1.0", default-features = false, features = ['std'] }
+hhdemo-core = { path = "../../core" }
